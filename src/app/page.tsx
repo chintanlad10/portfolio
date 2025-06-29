@@ -203,7 +203,7 @@ export default function Home() {
                 { name: "SQL", level: 80, color: "#336791" },
                 { name: "MongoDB", level: 70, color: "#47A248" },
                 { name: "Git", level: 85, color: "#F05032" },
-              ].map((skill, index) => (
+              ].map((skill) => (
                 <div key={skill.name} className="bg-gradient-to-r from-white/50 to-gray-50/50 p-6 rounded-3xl border border-gray-200 hover:shadow-lg transition-all duration-300">
                   <div className="flex justify-between items-center mb-3">
                     <span className="font-bold text-gray-800 text-lg">{skill.name}</span>
@@ -250,7 +250,7 @@ export default function Home() {
                 description: "Built an automated research assistant using LangChain.",
                 techStack: ["Python", "LangChain", "OpenAI API"]
               }
-            ].map((project, index) => (
+            ].map((project) => (
               <div key={project.title} className="group bg-white/70 backdrop-blur-xl rounded-4xl shadow-2xl p-8 hover:shadow-3xl transition-all duration-500 hover:scale-105">
                 <div className="bg-gradient-to-br from-purple-100 to-pink-100 w-full h-48 rounded-3xl mb-6 flex items-center justify-center">
                   <div className="text-6xl text-purple-400">🚀</div>
@@ -287,8 +287,8 @@ export default function Home() {
                 "Data Analysis Using Python (IBM)",
                 "LFS101 Introduction to Linux (Linux Foundation)",
                 "Artificial Intelligence Fundamentals (IBM-SkillsBuild)"
-              ].map((cert, index) => (
-                <div key={index} className="bg-gradient-to-r from-pink-50 to-purple-50 p-6 rounded-3xl border border-pink-100 hover:shadow-lg transition-all duration-300 flex items-center gap-4">
+              ].map((cert) => (
+                <div key={cert} className="bg-gradient-to-r from-pink-50 to-purple-50 p-6 rounded-3xl border border-pink-100 hover:shadow-lg transition-all duration-300 flex items-center gap-4">
                   <div className="text-3xl">🏆</div>
                   <span className="text-gray-800 text-lg font-medium">{cert}</span>
                 </div>
@@ -307,8 +307,8 @@ export default function Home() {
                 "Won Inter-School Football Tournament",
                 "Yellow Belt in Karate",
                 "Two-time winner of JCI Drawing Competition"
-              ].map((achievement, index) => (
-                <div key={index} className="bg-gradient-to-r from-yellow-50 to-orange-50 p-4 rounded-2xl border border-yellow-100 hover:shadow-md transition-all duration-300 flex items-center gap-3">
+              ].map((achievement) => (
+                <div key={achievement} className="bg-gradient-to-r from-yellow-50 to-orange-50 p-4 rounded-2xl border border-yellow-100 hover:shadow-md transition-all duration-300 flex items-center gap-3">
                   <div className="text-2xl">🏅</div>
                   <span className="text-gray-800 text-lg">{achievement}</span>
                 </div>
@@ -323,8 +323,8 @@ export default function Home() {
                 { title: "House Sports Captain, Green House, Vallabh Ashram", period: "Apr 2018 - Mar 2019" },
                 { title: "Member, Geeks for Geeks Student Chapter – VIT-AP", period: "Aug 2023 – Nov 2023" },
                 { title: "Member, Bulls and Bears Club – VIT-AP", period: "Dec 2023 – May 2024" }
-              ].map((item, index) => (
-                <div key={index} className="bg-gradient-to-r from-indigo-50 to-blue-50 p-6 rounded-3xl border border-indigo-100 hover:shadow-lg transition-all duration-300">
+              ].map((item) => (
+                <div key={item.title} className="bg-gradient-to-r from-indigo-50 to-blue-50 p-6 rounded-3xl border border-indigo-100 hover:shadow-lg transition-all duration-300">
                   <div className="flex items-center gap-3 mb-2">
                     <div className="text-2xl">🤝</div>
                     <span className="font-semibold text-gray-800 text-lg">{item.title}</span>
