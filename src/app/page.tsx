@@ -1,6 +1,7 @@
 'use client';
-import { FaEnvelope, FaPhone, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import React, { useRef, useState, useEffect } from "react";
+import Image from "next/image";
 
 function lerpColor(a: string, b: string, t: number) {
   // a, b: hex color strings; t: 0-1
@@ -105,7 +106,7 @@ export default function Home() {
             <div>
               <div className="flex flex-col md:flex-row md:justify-between md:items-center">
                 <div>
-                  <span className="font-bold text-black">M.G.M Amin & V.N. Savani's Vallabh Ashram, Valsad</span>
+                  <span className="font-bold text-black">M.G.M Amin &amp; V.N. Savani&apos;s Vallabh Ashram, Valsad</span>
                   <span className="block italic text-black">Class X – CBSE</span>
                 </div>
                 <span className="text-gray-600 text-sm">Apr 2007 – Mar 2020</span>
@@ -299,15 +300,17 @@ function AutoScrollBadgePlatter() {
       onMouseLeave={() => { isHovered.current = false; }}
     >
       <div className="flex gap-6 px-6">
-        {BADGES.map((badge, idx) => (
+        {BADGES.map((badge) => (
           <div
             key={badge.alt}
             className="flex-shrink-0 bg-white rounded-3xl shadow-lg p-6 flex flex-col items-center justify-center transition-transform duration-200 hover:scale-105 min-w-[220px] max-w-[220px] border border-gray-100"
             style={{ boxShadow: '0 4px 24px 0 rgba(0,0,0,0.08)' }}
           >
-            <img
+            <Image
               src={badge.src}
               alt={badge.alt}
+              width={96}
+              height={96}
               className="w-24 h-24 object-contain mb-4 rounded-xl"
             />
             <span className="text-center text-base font-semibold text-gray-800 mb-2">{badge.alt}</span>
@@ -318,29 +321,5 @@ function AutoScrollBadgePlatter() {
         ))}
       </div>
     </div>
-  );
-}
-
-function CardPlatter({ title, items }: { title: string, items: { title: string, details: string[] }[] }) {
-  return (
-    <section className="w-full py-12 bg-transparent">
-      <h2 className="text-3xl font-extrabold text-center mb-8 text-orange-700 tracking-tight">{title}</h2>
-      <div className="w-full overflow-x-auto pb-4">
-        <div className="flex gap-6 px-6" style={{scrollbarWidth: 'none', msOverflowStyle: 'none'}}>
-          {items.map((item, idx) => (
-            <div
-              key={item.title}
-              className="flex-shrink-0 bg-white rounded-3xl shadow-lg p-6 flex flex-col items-start justify-center min-w-[280px] max-w-[320px] border border-gray-100"
-              style={{ boxShadow: '0 4px 24px 0 rgba(0,0,0,0.08)', fontFamily: 'Helvetica Neue, Helvetica, Arial, sans-serif' }}
-            >
-              <span className="text-lg font-bold text-gray-800 mb-2">{item.title}</span>
-              <ul className="list-disc list-inside text-gray-700 text-sm ml-2">
-                {item.details.map((d, i) => <li key={i}>{d}</li>)}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
   );
 }
