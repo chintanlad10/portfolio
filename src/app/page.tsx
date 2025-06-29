@@ -303,6 +303,7 @@ export default function Home() {
             <h2 className="text-4xl font-black border-b-4 border-yellow-300 pb-4 mb-8 text-yellow-700 text-center">Achievements</h2>
             <div className="space-y-4">
               {[
+                "Winner of AI Skills Fest Challenge: Create agentic AI solutions with Azure AI Foundry",
                 "Passed Elementary and Intermediate Drawing Exams with A grade",
                 "Won Inter-School Football Tournament",
                 "Yellow Belt in Karate",
